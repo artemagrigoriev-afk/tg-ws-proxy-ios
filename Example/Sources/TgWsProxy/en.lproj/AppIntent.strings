@@ -1,0 +1,5 @@
+"appIntentStartTgWsProxyTitle" = "Start TgWsProxy";
+"appIntentStartTgWsProxyBgTitle" = "Start TgWsProxy In Background";
+"appIntentStartTgWsProxyDesc" = "Starts Telegram WS Proxy";
+"appIntentStopTgWsProxyTitle" = "Stop TgWsProxy";
+"appIntentStopTgWsProxyDesc" = "Stops Telegram WS Proxy";

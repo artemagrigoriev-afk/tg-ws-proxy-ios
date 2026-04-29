@@ -1,0 +1,820 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 76;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8B4FB5172FA08914003B7F90 /* SwTgWs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B7784D12F9E4BF600CE4786 /* SwTgWs.framework */; platformFilters = (ios, macos, tvos, watchos, xros, ); };
+		8B4FB7F62FA08B3B003B7F90 /* SwTgWs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B7784D12F9E4BF600CE4786 /* SwTgWs.framework */; };
+		8B4FB7F72FA08B3B003B7F90 /* SwTgWs.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8B7784D12F9E4BF600CE4786 /* SwTgWs.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8B4FB8152FA0A286003B7F90 /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 8B4FB8142FA0A286003B7F90 /* RswiftLibrary */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8B4FB5182FA08914003B7F90 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8B7784C82F9E4BF600CE4786 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8B7784D02F9E4BF600CE4786;
+			remoteInfo = SwTgWs;
+		};
+		8B4FB7F82FA08B3B003B7F90 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8B7784C82F9E4BF600CE4786 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8B7784D02F9E4BF600CE4786;
+			remoteInfo = SwTgWs;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8B4FB7FA2FA08B3B003B7F90 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8B4FB7F72FA08B3B003B7F90 /* SwTgWs.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		8B4FB5132FA08914003B7F90 /* SwTgWsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwTgWsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B4FB8DF2FA0CCF1003B7F90 /* TODO.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = TODO.md; sourceTree = "<group>"; };
+		8B4FC4E02FA11023003B7F90 /* README-ru.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "README-ru.md"; sourceTree = "<group>"; };
+		8B4FC4E72FA13A10003B7F90 /* xcodebuild_unsigned.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = xcodebuild_unsigned.sh; sourceTree = "<group>"; };
+		8B4FC4E92FA1459E003B7F90 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		8B5F6E972FA209F300FDCD3E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		8B5F6F0B2FA212F200FDCD3E /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		8B5F819D2F9F4E7D001D2867 /* TgWsProxy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TgWsProxy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B7784D12F9E4BF600CE4786 /* SwTgWs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwTgWs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B7784E02F9E4C4300CE4786 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		8B4FC5112FA1479E003B7F90 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				.gitignore,
+				.swiftpm/xcode/package.xcworkspace,
+				.swiftpm/xcode/xcuserdata/developer.xcuserdatad/xcschemes/xcschememanagement.plist,
+				/Localized/Sources/TgWsProxy/AppIntent.strings,
+				/Localized/Sources/TgWsProxy/InfoPlist.strings,
+				Package.resolved,
+				Package.swift,
+				Sources/TgWsProxy/Assets.xcassets,
+				Sources/TgWsProxy/blank.mp3,
+				Sources/TgWsProxy/Constants.swift,
+				Sources/TgWsProxy/Controller/PlaybackController.swift,
+				Sources/TgWsProxy/Controller/ProxyManager.swift,
+				"Sources/TgWsProxy/Extension/STWMTProtoProxyConfig+SaveLoad.swift",
+				Sources/TgWsProxy/Info.plist,
+				Sources/TgWsProxy/LaunchScreen.storyboard,
+				Sources/TgWsProxy/MTProtoProxyServer.swift,
+				"Sources/TgWsProxy/Preview Content/Preview Assets.xcassets",
+				Sources/TgWsProxy/PrivacyInfo.xcprivacy,
+				Sources/TgWsProxy/RawWebSocket.swift,
+				Sources/TgWsProxy/Shortcut/StartTgWsProxyIntentBg.swift,
+				Sources/TgWsProxy/Shortcut/StartTgWsProxyIntentFg.swift,
+				Sources/TgWsProxy/Shortcut/StopTgWsProxyIntent.swift,
+				Sources/TgWsProxy/TgWsProxyApp.swift,
+				Sources/TgWsProxy/UI/ScreenView/HomeScreen.swift,
+				Sources/TgWsProxy/UI/ScreenView/SettingsScreen.swift,
+			);
+			target = 8B7784D02F9E4BF600CE4786 /* SwTgWs */;
+		};
+		8BFDBF6F2FA1486C00753CF8 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				/Localized/Sources/TgWsProxy/AppIntent.strings,
+				/Localized/Sources/TgWsProxy/InfoPlist.strings,
+				Sources/TgWsProxy/Assets.xcassets,
+				Sources/TgWsProxy/blank.mp3,
+				Sources/TgWsProxy/Constants.swift,
+				Sources/TgWsProxy/Controller/PlaybackController.swift,
+				Sources/TgWsProxy/Controller/ProxyManager.swift,
+				"Sources/TgWsProxy/Extension/STWMTProtoProxyConfig+SaveLoad.swift",
+				Sources/TgWsProxy/LaunchScreen.storyboard,
+				Sources/TgWsProxy/MTProtoProxyServer.swift,
+				"Sources/TgWsProxy/Preview Content/Preview Assets.xcassets",
+				Sources/TgWsProxy/PrivacyInfo.xcprivacy,
+				Sources/TgWsProxy/RawWebSocket.swift,
+				Sources/TgWsProxy/Shortcut/StartTgWsProxyIntentBg.swift,
+				Sources/TgWsProxy/Shortcut/StartTgWsProxyIntentFg.swift,
+				Sources/TgWsProxy/Shortcut/StopTgWsProxyIntent.swift,
+				Sources/TgWsProxy/TgWsProxyApp.swift,
+				Sources/TgWsProxy/UI/ScreenView/HomeScreen.swift,
+				Sources/TgWsProxy/UI/ScreenView/SettingsScreen.swift,
+			);
+			target = 8B5F819C2F9F4E7D001D2867 /* TgWsProxy */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		8B4FB50B2FA08881003B7F90 /* Tests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Tests; sourceTree = "<group>"; };
+		8B7784DC2F9E4C0500CE4786 /* Sources */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Sources; sourceTree = "<group>"; };
+		8B7784E12F9E4C5D00CE4786 /* Example */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (8BFDBF6F2FA1486C00753CF8 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 8B4FC5112FA1479E003B7F90 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Example; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8B4FB5102FA08914003B7F90 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B4FB5172FA08914003B7F90 /* SwTgWs.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B5F819A2F9F4E7D001D2867 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B4FB7F62FA08B3B003B7F90 /* SwTgWs.framework in Frameworks */,
+				8B4FB8152FA0A286003B7F90 /* RswiftLibrary in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B7784CE2F9E4BF600CE4786 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8B5F81D52F9F4F2A001D2867 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8B7784C72F9E4BF600CE4786 = {
+			isa = PBXGroup;
+			children = (
+				8B7784E12F9E4C5D00CE4786 /* Example */,
+				8B7784DC2F9E4C0500CE4786 /* Sources */,
+				8B4FB50B2FA08881003B7F90 /* Tests */,
+				8B4FC4E92FA1459E003B7F90 /* .gitignore */,
+				8B7784E02F9E4C4300CE4786 /* Package.swift */,
+				8B4FB8DF2FA0CCF1003B7F90 /* TODO.md */,
+				8B5F6F0B2FA212F200FDCD3E /* LICENSE */,
+				8B4FC4E02FA11023003B7F90 /* README-ru.md */,
+				8B5F6E972FA209F300FDCD3E /* README.md */,
+				8B4FC4E72FA13A10003B7F90 /* xcodebuild_unsigned.sh */,
+				8B5F81D52F9F4F2A001D2867 /* Frameworks */,
+				8B7784D22F9E4BF600CE4786 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8B7784D22F9E4BF600CE4786 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8B7784D12F9E4BF600CE4786 /* SwTgWs.framework */,
+				8B5F819D2F9F4E7D001D2867 /* TgWsProxy.app */,
+				8B4FB5132FA08914003B7F90 /* SwTgWsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8B7784CC2F9E4BF600CE4786 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8B4FB5122FA08914003B7F90 /* SwTgWsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B4FB51A2FA08914003B7F90 /* Build configuration list for PBXNativeTarget "SwTgWsTests" */;
+			buildPhases = (
+				8B4FB50F2FA08914003B7F90 /* Sources */,
+				8B4FB5102FA08914003B7F90 /* Frameworks */,
+				8B4FB5112FA08914003B7F90 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8B4FB5192FA08914003B7F90 /* PBXTargetDependency */,
+			);
+			name = SwTgWsTests;
+			packageProductDependencies = (
+			);
+			productName = SwTgWsTests;
+			productReference = 8B4FB5132FA08914003B7F90 /* SwTgWsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8B5F819C2F9F4E7D001D2867 /* TgWsProxy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B5F81A82F9F4E7F001D2867 /* Build configuration list for PBXNativeTarget "TgWsProxy" */;
+			buildPhases = (
+				8B5F81992F9F4E7D001D2867 /* Sources */,
+				8B5F819A2F9F4E7D001D2867 /* Frameworks */,
+				8B5F819B2F9F4E7D001D2867 /* Resources */,
+				8B4FB7FA2FA08B3B003B7F90 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8B4FB8172FA0A291003B7F90 /* PBXTargetDependency */,
+				8B4FB7F92FA08B3B003B7F90 /* PBXTargetDependency */,
+			);
+			name = TgWsProxy;
+			packageProductDependencies = (
+				8B4FB8142FA0A286003B7F90 /* RswiftLibrary */,
+			);
+			productName = TgWsProxy;
+			productReference = 8B5F819D2F9F4E7D001D2867 /* TgWsProxy.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8B7784D02F9E4BF600CE4786 /* SwTgWs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B7784D72F9E4BF600CE4786 /* Build configuration list for PBXNativeTarget "SwTgWs" */;
+			buildPhases = (
+				8B7784CC2F9E4BF600CE4786 /* Headers */,
+				8B7784CD2F9E4BF600CE4786 /* Sources */,
+				8B7784CE2F9E4BF600CE4786 /* Frameworks */,
+				8B7784CF2F9E4BF600CE4786 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				8B4FB50B2FA08881003B7F90 /* Tests */,
+				8B7784DC2F9E4C0500CE4786 /* Sources */,
+				8B7784E12F9E4C5D00CE4786 /* Example */,
+			);
+			name = SwTgWs;
+			packageProductDependencies = (
+			);
+			productName = SwTgWs;
+			productReference = 8B7784D12F9E4BF600CE4786 /* SwTgWs.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8B7784C82F9E4BF600CE4786 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1620;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					8B4FB5122FA08914003B7F90 = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					8B5F819C2F9F4E7D001D2867 = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					8B7784D02F9E4BF600CE4786 = {
+						CreatedOnToolsVersion = 16.2;
+						LastSwiftMigration = 1620;
+					};
+				};
+			};
+			buildConfigurationList = 8B7784CB2F9E4BF600CE4786 /* Build configuration list for PBXProject "SwTgWs" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				ru,
+			);
+			mainGroup = 8B7784C72F9E4BF600CE4786;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				8B4FB8132FA0A286003B7F90 /* XCRemoteSwiftPackageReference "R" */,
+			);
+			preferredProjectObjectVersion = 56;
+			productRefGroup = 8B7784D22F9E4BF600CE4786 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8B5F819C2F9F4E7D001D2867 /* TgWsProxy */,
+				8B7784D02F9E4BF600CE4786 /* SwTgWs */,
+				8B4FB5122FA08914003B7F90 /* SwTgWsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8B4FB5112FA08914003B7F90 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B5F819B2F9F4E7D001D2867 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B7784CF2F9E4BF600CE4786 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8B4FB50F2FA08914003B7F90 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B5F81992F9F4E7D001D2867 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B7784CD2F9E4BF600CE4786 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8B4FB5192FA08914003B7F90 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilters = (
+				ios,
+				macos,
+				tvos,
+				watchos,
+				xros,
+			);
+			target = 8B7784D02F9E4BF600CE4786 /* SwTgWs */;
+			targetProxy = 8B4FB5182FA08914003B7F90 /* PBXContainerItemProxy */;
+		};
+		8B4FB7F92FA08B3B003B7F90 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8B7784D02F9E4BF600CE4786 /* SwTgWs */;
+			targetProxy = 8B4FB7F82FA08B3B003B7F90 /* PBXContainerItemProxy */;
+		};
+		8B4FB8172FA0A291003B7F90 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 8B4FB8162FA0A291003B7F90 /* RswiftGenerateInternalResources */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		8B4FB51B2FA08914003B7F90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.zeit.tg.ws.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				REGISTER_APP_GROUPS = NO;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx watchos watchsimulator xros xrsimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,3,4,7";
+				TVOS_DEPLOYMENT_TARGET = 13.0;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+				XROS_DEPLOYMENT_TARGET = 1.0;
+			};
+			name = Debug;
+		};
+		8B4FB51C2FA08914003B7F90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.zeit.tg.ws.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				REGISTER_APP_GROUPS = NO;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx watchos watchsimulator xros xrsimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,3,4,7";
+				TVOS_DEPLOYMENT_TARGET = 13.0;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+				XROS_DEPLOYMENT_TARGET = 1.0;
+			};
+			name = Release;
+		};
+		8B5F81A92F9F4E7F001D2867 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_ASSET_PATHS = "\"Example/Sources/TgWsProxy/Preview Content\"";
+				DEVELOPMENT_TEAM = KTJ3SX58WK;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Example/Sources/TgWsProxy/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "TgWsProxy will share its feature with local network devices";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = NO;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.4.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.zeit.tg.ws.proxy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TVOS_DEPLOYMENT_TARGET = 14.0;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+				XROS_DEPLOYMENT_TARGET = 1.0;
+			};
+			name = Debug;
+		};
+		8B5F81AA2F9F4E7F001D2867 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_ASSET_PATHS = "\"Example/Sources/TgWsProxy/Preview Content\"";
+				DEVELOPMENT_TEAM = KTJ3SX58WK;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Example/Sources/TgWsProxy/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "TgWsProxy will share its feature with local network devices";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = NO;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.4.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.zeit.tg.ws.proxy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TVOS_DEPLOYMENT_TARGET = 14.0;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+				XROS_DEPLOYMENT_TARGET = 1.0;
+			};
+			name = Release;
+		};
+		8B7784D82F9E4BF600CE4786 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 3;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = (
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MARKETING_VERSION = 1.4.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = org.zeit.tg.ws;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = auto;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx watchos watchsimulator xros xrsimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2,3,4,7";
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+				XROS_DEPLOYMENT_TARGET = 1.0;
+			};
+			name = Debug;
+		};
+		8B7784D92F9E4BF600CE4786 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 3;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = (
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MARKETING_VERSION = 1.4.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = org.zeit.tg.ws;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = auto;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx watchos watchsimulator xros xrsimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2,3,4,7";
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+				XROS_DEPLOYMENT_TARGET = 1.0;
+			};
+			name = Release;
+		};
+		8B7784DA2F9E4BF600CE4786 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8B7784DB2F9E4BF600CE4786 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8B4FB51A2FA08914003B7F90 /* Build configuration list for PBXNativeTarget "SwTgWsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B4FB51B2FA08914003B7F90 /* Debug */,
+				8B4FB51C2FA08914003B7F90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8B5F81A82F9F4E7F001D2867 /* Build configuration list for PBXNativeTarget "TgWsProxy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B5F81A92F9F4E7F001D2867 /* Debug */,
+				8B5F81AA2F9F4E7F001D2867 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8B7784CB2F9E4BF600CE4786 /* Build configuration list for PBXProject "SwTgWs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B7784DA2F9E4BF600CE4786 /* Debug */,
+				8B7784DB2F9E4BF600CE4786 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8B7784D72F9E4BF600CE4786 /* Build configuration list for PBXNativeTarget "SwTgWs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B7784D82F9E4BF600CE4786 /* Debug */,
+				8B7784D92F9E4BF600CE4786 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8B4FB8132FA0A286003B7F90 /* XCRemoteSwiftPackageReference "R" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mac-cain13/R.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.8.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8B4FB8142FA0A286003B7F90 /* RswiftLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8B4FB8132FA0A286003B7F90 /* XCRemoteSwiftPackageReference "R" */;
+			productName = RswiftLibrary;
+		};
+		8B4FB8162FA0A291003B7F90 /* RswiftGenerateInternalResources */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8B4FB8132FA0A286003B7F90 /* XCRemoteSwiftPackageReference "R" */;
+			productName = "plugin:RswiftGenerateInternalResources";
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 8B7784C82F9E4BF600CE4786 /* Project object */;
+}
