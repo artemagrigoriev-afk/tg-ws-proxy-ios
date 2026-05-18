@@ -1,0 +1,28 @@
+"homeScreenProxyStart" = "Запустить";
+"homeScreenProxyStop" = "Остановить";
+"homeScreenProxyActiveStatus" = "Прокси активен";
+"homeScreenProxyInactiveStatus" = "Прокси остановлен";
+"homeScreenTrafficStat" = "Статистика";
+"homeScreenTrafficConnections" = "Подключений";
+"homeScreenTrafficConnectionInfoCard" = "Подключение";
+"homeScreenProxySettingsInfo" = "Telegram MTProto";
+"homeScreenProxySettingsOpenInTlg" = "Открыть в Telegram";
+
+"settingsMTProtoConnCard" = "Подключение к MTProto";
+"settingsMTProtoConnIP" = "IP-адрес";
+"settingsDCListCard" = "Датацентры (DC:IP)";
+"settingsProxyPower" = "Производительность";
+"settingsProxyPowerBuffSize" = "Буфер, КБ";
+"settingsProxyPowerWsSessions" = "Пул WS-сессий";
+"settingsProxyPowerDetailedLogs" = "Подробные логи";
+"settingsInvalidPortErrMsg" = "Порт должен быть числом 1-65535";
+"settingsInvalidSecretErrMsg" = "Secret должен иметь 32 hex-символа";
+"settingsInvalidDcErrMsg" = "Неверный формат DC";
+
+"generalSrv" = "Сервер";
+"generalSrvPort" = "Порт";
+"generalMTProtoSecret" = "Secret";
+"generalCopy" = "Скопировать";
+"generalSave" = "Сохранить";
+"generalSettings" = "Настройки";
+"generalVersion" = "Версия";

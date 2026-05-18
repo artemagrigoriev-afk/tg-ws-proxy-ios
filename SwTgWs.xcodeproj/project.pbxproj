@@ -66,10 +66,10 @@
 				.swiftpm/xcode/xcuserdata/developer.xcuserdatad/xcschemes/xcschememanagement.plist,
 				/Localized/Sources/TgWsProxy/AppIntent.strings,
 				/Localized/Sources/TgWsProxy/InfoPlist.strings,
+				/Localized/Sources/TgWsProxy/Localizable.strings,
 				Package.resolved,
 				Package.swift,
 				Sources/TgWsProxy/Assets.xcassets,
-				Sources/TgWsProxy/blank.mp3,
 				Sources/TgWsProxy/Constants.swift,
 				Sources/TgWsProxy/Controller/PlaybackController.swift,
 				Sources/TgWsProxy/Controller/ProxyManager.swift,
@@ -94,8 +94,8 @@
 			membershipExceptions = (
 				/Localized/Sources/TgWsProxy/AppIntent.strings,
 				/Localized/Sources/TgWsProxy/InfoPlist.strings,
+				/Localized/Sources/TgWsProxy/Localizable.strings,
 				Sources/TgWsProxy/Assets.xcassets,
-				Sources/TgWsProxy/blank.mp3,
 				Sources/TgWsProxy/Constants.swift,
 				Sources/TgWsProxy/Controller/PlaybackController.swift,
 				Sources/TgWsProxy/Controller/ProxyManager.swift,
@@ -452,7 +452,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"Example/Sources/TgWsProxy/Preview Content\"";
 				DEVELOPMENT_TEAM = KTJ3SX58WK;
 				ENABLE_PREVIEWS = YES;
@@ -494,10 +494,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"Example/Sources/TgWsProxy/Preview Content\"";
-				DEVELOPMENT_TEAM = KTJ3SX58WK;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = Q6SJUT5K5D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = Example/Sources/TgWsProxy/Info.plist;
@@ -521,6 +523,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.zeit.tg.ws.proxy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "MyXL-UniversalDist";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

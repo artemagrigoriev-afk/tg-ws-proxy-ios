@@ -53,7 +53,9 @@ struct HomeScreen: View {
                 .font(.system(size: 48))
                 .foregroundColor(proxy.isRunning ? .green : .secondary)
 
-            Text(proxy.isRunning ? "Прокси активен" : "Прокси остановлен")
+            Text(proxy.isRunning
+                 ? R.string.localizable.homeScreenProxyActiveStatus()
+                 : R.string.localizable.homeScreenProxyInactiveStatus())
                 .font(.headline)
                 .foregroundColor(proxy.isRunning ? .primary : .secondary)
 
@@ -69,12 +71,12 @@ struct HomeScreen: View {
     private var statsCard: some View {
         VStack(spacing: 8) {
             HStack {
-                Text("Статистика")
+                Text(R.string.localizable.homeScreenTrafficStat)
                     .font(.subheadline.bold())
                 Spacer()
             }
             HStack(spacing: 16) {
-                statItem("Подключений", value: "\(proxy.stats.connectionsActive)")
+                statItem(R.string.localizable.homeScreenTrafficConnections(), value: "\(proxy.stats.connectionsActive)")
                 statItem("WS", value: "\(proxy.stats.connectionsWS)")
                 statItem("↑", value: formatBytes(proxy.stats.bytesUp))
                 statItem("↓", value: formatBytes(proxy.stats.bytesDown))
@@ -98,25 +100,25 @@ struct HomeScreen: View {
     private var connectCard: some View {
         VStack(alignment: .leading, spacing: 8) {
             HStack {
-                Text("Подключение")
+                Text(R.string.localizable.homeScreenTrafficConnectionInfoCard())
                     .font(.subheadline.bold())
                 Spacer()
                 Button {
                     UIPasteboard.general.string = proxy.config.tgConnectDeeplinkString
                 } label: {
-                    Label("Копировать", systemImage: "doc.on.doc")
+                    Label(R.string.localizable.generalCopy(), systemImage: "doc.on.doc")
                         .font(.caption)
                 }
             }
 
-            Text("MTProto прокси для Telegram:")
+            Text(R.string.localizable.homeScreenProxySettingsInfo)
                 .font(.caption)
                 .foregroundColor(.secondary)
 
             VStack(alignment: .leading, spacing: 4) {
-                infoRow("Сервер", value: proxy.config.host)
-                infoRow("Порт", value: "\(proxy.config.port)")
-                infoRow("Secret", value: "dd\(proxy.config.secret)")
+                infoRow(R.string.localizable.generalSrv(), value: proxy.config.host)
+                infoRow(R.string.localizable.generalSrvPort(), value: "\(proxy.config.port)")
+                infoRow(R.string.localizable.generalMTProtoSecret(), value: "dd\(proxy.config.secret)")
             }
             .font(.system(.caption, design: .monospaced))
 
@@ -125,7 +127,7 @@ struct HomeScreen: View {
                     UIApplication.shared.open(url)
                 }
             } label: {
-                Label("Открыть в Telegram", systemImage: "paperplane.fill")
+                Label(R.string.localizable.homeScreenProxySettingsOpenInTlg(), systemImage: "paperplane.fill")
                     .frame(maxWidth: .infinity)
             }
         }
@@ -152,7 +154,9 @@ struct HomeScreen: View {
         } label: {
             HStack {
                 Image(systemName: proxy.isRunning ? "stop.fill" : "play.fill")
-                Text(proxy.isRunning ? "Остановить" : "Запустить")
+                Text(proxy.isRunning
+                     ? R.string.localizable.homeScreenProxyStop
+                     : R.string.localizable.homeScreenProxyStart)
                     .fontWeight(.semibold)
             }
             .frame(maxWidth: .infinity)

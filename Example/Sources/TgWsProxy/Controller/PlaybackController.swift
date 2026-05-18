@@ -5,49 +5,49 @@ import UIKit
 
 ///'Silent' audio play controller
 final class PlaybackController: NSObject, Sendable {
-    
     ///Audio play singleton
     static let shared = PlaybackController()
     
     ///System audio player
-    fileprivate static let _player = AVPlayer()
-    
-    ///Playing item last tracked 'currentTime' for preventing multiple 'progressListener' events fire
-    fileprivate var _lastCurrTime: CMTime?
-    ///Silent audio url
-    fileprivate let _audioDataUrl: URL
+    fileprivate static let _player = try! AVAudioPlayer(data: PlaybackController.generateSilentWAV(durationSeconds: 5, sampleRate: 8000), fileTypeHint: "wav")
+#if DEBUG
+    fileprivate let periodicObserveTimer: Timer
+#endif
     
     ///'Silent' audio playing flag
     var playing: Bool {
         get {
-            guard let safeCurrItem = PlaybackController._player.currentItem, safeCurrItem.duration.seconds > 0.0, safeCurrItem.error == nil else {return false}
-            return PlaybackController._player.timeControlStatus == .playing && PlaybackController._player.rate != 0
-        }
-    }
-    
-    ///'Silent' audio duration in seconds
-    fileprivate var _trackDuration: TimeInterval {
-        get
-        {
-            guard let safePlayingItem = PlaybackController._player.currentItem else {return 0}
-            return safePlayingItem.duration.seconds
+            return PlaybackController._player.isPlaying
         }
     }
     
     fileprivate override init() {
-        _audioDataUrl = Bundle.main.url(forResource: "blank", withExtension: "mp3")!
+#if DEBUG
+        periodicObserveTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
+            if (!PlaybackController._player.isPlaying) {
+                return
+            }
+            let currTime = PlaybackController._player.currentTime
+            let duration = PlaybackController._player.duration
+            print("Playback time", currTime, "/", duration)
+        }
+#endif
         super.init()
         NotificationCenter.default.addObserver(forName: AVAudioSession.routeChangeNotification, object: nil, queue: .main, using: onAudioRouteChange)
         NotificationCenter.default.addObserver(forName: AVAudioSession.interruptionNotification, object: nil, queue: .main, using: onAVInterruption)
 #if canImport(UIKit)
-        NotificationCenter.default.addObserver(forName: UIApplication.willEnterForegroundNotification, object: nil, queue: .main, using: handleFgState)
-        NotificationCenter.default.addObserver(forName: UIApplication.didBecomeActiveNotification, object: nil, queue: .main, using: handleFgState)
+        NotificationCenter.default.addObserver(forName: UIApplication.willEnterForegroundNotification, object: nil, queue: .main, using: stopAudioForFgState)
+        NotificationCenter.default.addObserver(forName: UIApplication.didBecomeActiveNotification, object: nil, queue: .main, using: stopAudioForFgState)
 #endif
-        let periodTime = CMTimeMakeWithSeconds(1, preferredTimescale: Int32(NSEC_PER_SEC))
-        _ = PlaybackController._player.addPeriodicTimeObserver(forInterval: periodTime, queue: DispatchQueue.main, using: onPlaybackProgress)
+
+        //let periodTime = CMTimeMakeWithSeconds(1, preferredTimescale: Int32(NSEC_PER_SEC))
+        //_ = PlaybackController._player.addPeriodicTimeObserver(forInterval: periodTime, queue: DispatchQueue.main, using: onPlaybackProgress)
     }
     
     deinit {
+#if DEBUG
+        periodicObserveTimer.invalidate()
+#endif
         NotificationCenter.default.removeObserver(self, name: AVAudioSession.interruptionNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: AVAudioSession.routeChangeNotification, object: nil)
 #if canImport(UIKit)
@@ -67,14 +67,11 @@ final class PlaybackController: NSObject, Sendable {
             print(error)
             return false
         }
-        if (PlaybackController._player.currentItem == nil) {
-            PlaybackController._player.replaceCurrentItem(with: AVPlayerItem(url: _audioDataUrl))
-        } else {
-            _ = setPlaybackPosition(position: 0.0)
-        }
         do {
+            PlaybackController._player.volume = 0.0
+            PlaybackController._player.numberOfLoops = -1
             try AVAudioSession.sharedInstance().setActive(true)
-            PlaybackController._player.play()
+            PlaybackController._player.play(atTime: 0)
         } catch {
             print(error)
             return false
@@ -85,40 +82,11 @@ final class PlaybackController: NSObject, Sendable {
     ///Stops playing looped 'silent' audio and releases audio session
     func stopPlaySilentAudio() {
         PlaybackController._player.pause()
-        _ = setPlaybackPosition(position: 0.0)
         do {
             try AVAudioSession.sharedInstance().setActive(false)
         } catch {
             print(error)
         }
-    }
-    
-    ///Sets playing looped 'silent' audio position
-    ///- Parameter position: Desired audio position
-    ///- Returns: Set playback position result
-    fileprivate func setPlaybackPosition(position: TimeInterval) -> Bool {
-        if (PlaybackController._player.currentItem == nil || position < 0 || _trackDuration < position) {
-            return false
-        }
-        let seekTime: CMTime = CMTimeMakeWithSeconds(position, preferredTimescale: Int32(NSEC_PER_SEC))
-        PlaybackController._player.seek(to: seekTime, toleranceBefore: CMTime.zero, toleranceAfter: CMTime.zero)
-        return true
-    }
-        
-    ///Audio playing progress handler: loops audio
-    ///- Parameter currentTime: Audio playback position
-    fileprivate func onPlaybackProgress(currentTime: CMTime) {
-        if (_lastCurrTime?.seconds.rounded() == currentTime.seconds.rounded()) {
-            return
-        }
-        _lastCurrTime = currentTime
-#if DEBUG
-        print(currentTime)
-#endif
-        if (currentTime.seconds <= 4.2) {
-            return
-        }
-        _ = setPlaybackPosition(position: 0.0)
     }
     
     ///Audio session interruption state event handler
@@ -166,7 +134,7 @@ final class PlaybackController: NSObject, Sendable {
         }
     }
     
-    fileprivate func handleFgState(_ notification: Notification) {
+    fileprivate func stopAudioForFgState(_ notification: Notification) {
         Task { @MainActor in
             if (!ProxyManager.shared.isRunning) {
                 stopPlaySilentAudio()
@@ -177,5 +145,40 @@ final class PlaybackController: NSObject, Sendable {
             }
             _ = startPlaySilentAudio()
         }
+    }
+    
+    /// Generates a minimal silent WAV file in memory.
+    fileprivate static func generateSilentWAV(durationSeconds: Int, sampleRate: Int) -> Data {
+        let numSamples = sampleRate * durationSeconds
+        let bitsPerSample = 16
+        let numChannels = 1
+        let byteRate = sampleRate * numChannels * (bitsPerSample / 8)
+        let blockAlign = numChannels * (bitsPerSample / 8)
+        let dataSize = numSamples * numChannels * (bitsPerSample / 8)
+        let fileSize = 36 + dataSize
+
+        var data = Data()
+
+        // RIFF header
+        data.append(contentsOf: [0x52, 0x49, 0x46, 0x46]) // "RIFF"
+        data.append(contentsOf: withUnsafeBytes(of: UInt32(fileSize).littleEndian) { Array($0) })
+        data.append(contentsOf: [0x57, 0x41, 0x56, 0x45]) // "WAVE"
+
+        // fmt subchunk
+        data.append(contentsOf: [0x66, 0x6D, 0x74, 0x20]) // "fmt "
+        data.append(contentsOf: withUnsafeBytes(of: UInt32(16).littleEndian) { Array($0) }) // subchunk size
+        data.append(contentsOf: withUnsafeBytes(of: UInt16(1).littleEndian) { Array($0) }) // PCM format
+        data.append(contentsOf: withUnsafeBytes(of: UInt16(numChannels).littleEndian) { Array($0) })
+        data.append(contentsOf: withUnsafeBytes(of: UInt32(sampleRate).littleEndian) { Array($0) })
+        data.append(contentsOf: withUnsafeBytes(of: UInt32(byteRate).littleEndian) { Array($0) })
+        data.append(contentsOf: withUnsafeBytes(of: UInt16(blockAlign).littleEndian) { Array($0) })
+        data.append(contentsOf: withUnsafeBytes(of: UInt16(bitsPerSample).littleEndian) { Array($0) })
+
+        // data subchunk
+        data.append(contentsOf: [0x64, 0x61, 0x74, 0x61]) // "data"
+        data.append(contentsOf: withUnsafeBytes(of: UInt32(dataSize).littleEndian) { Array($0) })
+        data.append(Data(count: dataSize)) // silent samples (all zeros)
+
+        return data
     }
 }

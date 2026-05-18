@@ -1,0 +1,28 @@
+"homeScreenProxyStart" = "Start";
+"homeScreenProxyStop" = "Stop";
+"homeScreenProxyActiveStatus" = "Proxy is active";
+"homeScreenProxyInactiveStatus" = "Proxy is stopped";
+"homeScreenTrafficStat" = "Stats";
+"homeScreenTrafficConnections" = "Connections";
+"homeScreenTrafficConnectionInfoCard" = "Connection";
+"homeScreenProxySettingsInfo" = "Telegram MTProto";
+"homeScreenProxySettingsOpenInTlg" = "Open in Telegram";
+
+"settingsMTProtoConnCard" = "MTProto connection";
+"settingsMTProtoConnIP" = "IP address";
+"settingsDCListCard" = "Data centers (DC:IP)";
+"settingsProxyPower" = "Proxy Perfomance";
+"settingsProxyPowerBuffSize" = "Buffer, kb";
+"settingsProxyPowerWsSessions" = "WS sessions pool";
+"settingsProxyPowerDetailedLogs" = "Detailed logs";
+"settingsInvalidPortErrMsg" = "Port must be a number between 1-65535";
+"settingsInvalidSecretErrMsg" = "Secret must have 32 hex characters";
+"settingsInvalidDcErrMsg" = "Invalid DC:IP format";
+
+"generalSrv" = "Server";
+"generalSrvPort" = "Port";
+"generalMTProtoSecret" = "Secret";
+"generalCopy" = "Copy";
+"generalSave" = "Save";
+"generalSettings" = "Settings";
+"generalVersion" = "Version";

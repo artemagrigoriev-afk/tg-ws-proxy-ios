@@ -18,24 +18,24 @@ struct SettingsScreen: View {
         ScrollView(.vertical) {
             VStack(spacing: 16) {
                 VStack(alignment: .leading, spacing: .zero) {
-                    Text("Подключение MTProto")
+                    Text(R.string.localizable.settingsMTProtoConnCard)
                         .font(.title3)
                         .fontWeight(.semibold)
 
-                    Text("IP-адрес")
+                    Text(R.string.localizable.settingsMTProtoConnIP)
                     TextField("127.0.0.1", text: $host)
                         .multilineTextAlignment(.leading)
                         .padding(EdgeInsets(top: 4, leading: .zero, bottom: 10, trailing: .zero))
                         .textFieldStyle(.roundedBorder)
                     
-                    Text("Порт")
+                    Text(R.string.localizable.generalSrvPort)
                     TextField("1443", text: $port)
                         .multilineTextAlignment(.leading)
                         .keyboardType(.numberPad)
                         .padding(EdgeInsets(top: 4, leading: .zero, bottom: 10, trailing: .zero))
                         .textFieldStyle(.roundedBorder)
                     
-                    Text("Secret")
+                    Text(R.string.localizable.generalMTProtoSecret)
                     HStack {
                         TextField("hex secret", text: $secret)
                             .multilineTextAlignment(.leading)
@@ -55,7 +55,7 @@ struct SettingsScreen: View {
                 .cornerRadius(12.0)
                 
                 VStack(alignment: .leading, spacing: .zero) {
-                    Text("Датацентры (DC → IP)")
+                    Text(R.string.localizable.settingsDCListCard)
                         .font(.title3)
                         .fontWeight(.semibold)
                     TextEditor(text: $dcLines)
@@ -68,25 +68,25 @@ struct SettingsScreen: View {
                 .cornerRadius(12.0)
                 
                 VStack(alignment: .leading, spacing: .zero) {
-                    Text("Производительность")
+                    Text(R.string.localizable.settingsProxyPower)
                         .font(.title3)
                         .fontWeight(.semibold)
                     
-                    Text("Буфер, КБ")
+                    Text(R.string.localizable.settingsProxyPowerBuffSize)
                     TextField("256", text: $bufferKB)
                         .multilineTextAlignment(.leading)
                         .keyboardType(.numberPad)
                         .padding(EdgeInsets(top: 4, leading: .zero, bottom: 10, trailing: .zero))
                         .textFieldStyle(.roundedBorder)
                     
-                    Text("Пул WS-сессий")
+                    Text(R.string.localizable.settingsProxyPowerWsSessions)
                     TextField("4", text: $poolSize)
                         .multilineTextAlignment(.leading)
                         .keyboardType(.numberPad)
                         .padding(EdgeInsets(top: 4, leading: .zero, bottom: 10, trailing: .zero))
                         .textFieldStyle(.roundedBorder)
                     
-                    Toggle("Подробные логи", isOn: $verbose)
+                    Toggle(R.string.localizable.settingsProxyPowerDetailedLogs(), isOn: $verbose)
 
                     if let error = showError {
                         Section {
@@ -102,7 +102,7 @@ struct SettingsScreen: View {
                 .cornerRadius(12.0)
 
                 HStack {
-                    Text("Версия")
+                    Text(R.string.localizable.generalVersion)
                     Spacer()
                     Text("1.4.0-ios")
                         .foregroundColor(.secondary)
@@ -111,14 +111,14 @@ struct SettingsScreen: View {
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(.horizontal, 16)
         }
-        .navigationTitle("Настройки")
+        .navigationTitle(R.string.localizable.generalSettings())
         .navigationBarTitleDisplayMode(.inline)
         .toolbar(content: {
             ToolbarItem(placement: .topBarTrailing) {
                 Button {
                     save()
                 } label: {
-                    Text("Сохранить")
+                    Text(R.string.localizable.generalSave)
                         .fontWeight(.semibold)
                 }
             }
@@ -138,11 +138,11 @@ struct SettingsScreen: View {
 
     private func save() {
         guard let portInt = UInt16(port), portInt > 0 else {
-            showError = "Порт должен быть числом 1-65535"
+            showError = R.string.localizable.settingsInvalidPortErrMsg()
             return
         }
         guard secret.count == 32, UInt64(secret.prefix(16), radix: 16) != nil else {
-            showError = "Secret должен иметь 32 hex-символа"
+            showError = R.string.localizable.settingsInvalidSecretErrMsg()
             return
         }
         let secretBytes = STWBinaryUtil.hexToBytes(secret)
@@ -157,7 +157,7 @@ struct SettingsScreen: View {
             if trimmed.isEmpty { continue }
             let parts = trimmed.split(separator: ":", maxSplits: 1)
             guard parts.count == 2, let dc = Int(parts[0]) else {
-                showError = "Неверный формат DC: \(trimmed)"
+                showError = R.string.localizable.settingsInvalidDcErrMsg() + " " + trimmed
                 return
             }
             dcRedirects[dc] = String(parts[1])
