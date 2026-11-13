@@ -1,0 +1,26 @@
+name: Build IPA
+on: workflow_dispatch
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build unsigned app
+        run: |
+          chmod +x xcodebuild_unsigned.sh
+          ./xcodebuild_unsigned.sh
+      - name: Package IPA
+        run: |
+          IPA=$(find . -iname "*.ipa" | head -n 1)
+          if [ -z "$IPA" ]; then
+            APP=$(find . -name "*.app" -path "*iphoneos*" | head -n 1)
+            mkdir -p Payload
+            cp -R "$APP" Payload/
+            zip -r TgWsProxy-unsigned.ipa Payload
+          else
+            cp "$IPA" TgWsProxy-unsigned.ipa
+          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: tg-ws-proxy-ipa
+          path: TgWsProxy-unsigned.ipa
